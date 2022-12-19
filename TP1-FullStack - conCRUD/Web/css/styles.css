@@ -1,0 +1,519 @@
+* {
+     box-sizing: border-box;
+ }
+ 
+ html{
+     font-size: 1 rem;
+     height: 100%;
+    }
+ 
+body {
+    background-color: #F2F2F2;
+    max-width: 1250px;
+    margin: 0.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+      
+}
+/* header -->logo texto y menu*/
+.contenedor{
+    display: flex;
+    height: auto;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px;
+    background-color: white;
+    margin: 0.5rem;
+
+}
+
+.header-logo{
+    display: block;
+    padding-top:10px;
+}
+
+.header-titulo{
+    text-align: center;
+    display: block; 
+    padding-right: 10px;  
+    color: black;
+}
+.menu-option{
+    background-color: rgb(49, 45, 45); 
+}
+.menu-option li{
+    padding:5px;
+    list-style:none;
+    display: inline-block; 
+    border:1px solid rgb(49, 45, 45);
+}
+
+.menu-option a{
+    text-transform:none;
+    color: rgb(190, 185, 185);
+    text-decoration:none;
+    display: block;
+    font-weight: 700;
+    padding: 5px;   
+}
+
+.menu-option :hover{
+    color: rgb(49, 45, 45);
+    background-color:  rgb(190, 185, 185);
+}
+
+.menu-option :active{
+     background-color: rgb(152, 200, 241); 
+     color:rgb(4, 75, 107);
+}
+
+/*Footer*/
+footer{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+      
+}
+
+.foot{
+    display: flex;
+    height:auto;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    background-image: url("../img/d-banner-64.jpg");
+    height: 120px;
+    padding: 0px;
+    background-color: white; 
+}
+
+.idatos{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: white;
+    font-weight: 300;
+}
+
+.leyenda{
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.foot-redes{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-right:50px;
+
+}
+.redes{
+    color: white;
+}
+
+.imDatos :hover{
+    color: rgb(49, 45, 45);
+    background-color:  rgb(190, 185, 185);
+}
+
+/*main - inicio*/
+
+/*banner*/
+
+.fondo{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    background-image: url("../img/d-banner-64.jpg");
+    height: 200px;
+    max-width:100%;
+   /* margin: 0.5rem;*/
+}
+
+div.texto{
+    margin: 30px;
+    color: White;
+    opacity: 1;
+    text-align: center;
+}
+
+div.texto h2{
+    padding-top:50px;
+}
+
+
+/* resto del main pagina index*/
+
+.secciones {
+    max-width:100%;
+    background-color: white;
+   /* margin: 0.5rem;*/
+    box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.productos{
+    background: rgb(242, 237, 237);
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+}
+
+.item {
+    
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    background: rgb(250, 249, 249);
+    justify-content: center; 
+    align-items: center;
+} 
+
+
+.card-img {
+    display: inline-flex;
+    width:100%;
+    padding: 1px;
+    justify-content: center;
+    margin-top: 15px;
+    background: white;
+}
+
+.card-body {
+ padding: 10px;   
+ margin:0;
+}
+.card-body p {
+    text-align: justify;
+}
+
+/* pagina Productos */
+.encabezado {
+margin: 10px;
+padding: 15px;
+background-color: aliceblue; 
+border-radius: 6px;
+
+}
+
+.container{
+    display: grid;
+    margin: 3px;
+    background-color: #fafafa;
+
+}
+.catalogo-item{
+    display: grid;
+    grid-template-columns: 30% 50% 20%;
+    grid-template-areas:        
+        "card adata price";
+}
+.card-prod{
+grid-area: card;
+background-color: white; 
+margin:3px;
+padding: 5px;
+}
+
+.datos{
+    grid-area: adata;
+    font-size: smaller;
+    margin:3px;
+    text-align:justify;
+    background-color: aliceblue; 
+    padding: 5px;
+}
+.price{
+    grid-area: price;
+    font-size: smaller;
+    align-items: center;
+    margin:5px;
+    background-color: rgb(172, 206, 246);
+    padding: 5px;
+}
+.compra{
+    padding: 10px;
+    margin: 10px;
+    justify-content: space-between;
+    align-items: block;
+
+}
+.pagos h5{ 
+    padding: 10px;
+    margin: 10px;
+    gap:5px;
+
+}
+
+ @media (max-width: 1000px) {
+    .productos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background: rgb(237, 232, 232);
+        padding: 5px;
+        margin: 5px;
+        gap: 10px;  
+     }
+    .container{
+        display: grid;
+        margin: 3px;
+        background-color: #fafafa;
+    }
+    .catalogo-item{
+        display: grid;
+        grid-template-columns: 70% 30% ;
+        grid-template-areas:        
+                "card price "
+                "adata adata";
+    }
+ }
+
+ @media (max-width: 660px) {
+    .productos{
+    background: rgb(237, 232, 232);
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap:10px;
+    }
+    .container{
+        display: grid;
+        margin: 3px;
+        background-color: #fafafa;
+    }
+    .catalogo-item{
+        display: grid;
+        grid-template-columns: 70% 30% ;
+        grid-template-areas:        
+                "card price "
+                "adata adata";
+    }
+    .cuerpo-servicios {
+        grid-template-areas: "repara repara "
+                             "compra venta ";
+    
+    }
+    .reparaciones{
+        grid-template-areas: "tit-repara tit-repara "
+                             "repara1 repara1 "
+                             "tit-repara tit-repara"
+                             "repara2 repara3";
+    }
+ }
+ @media (max-width: 500px) {
+    .container{
+        display: grid;
+        margin: 3px;
+        background-color: #fafafa;
+    }
+    .catalogo-item{
+        display: grid;
+        grid-template-columns: 70% 30% ;
+        grid-template-areas:        
+                "card price "
+                "adata adata";
+    }
+    
+ }
+
+.secciones h2{
+    margin:1.5rem; 
+
+}
+
+.servicios{
+    padding-bottom:15px;
+    list-style:none;
+}
+
+.imagenes-servicios{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow:  0px 1px 10px rgba(24, 22, 22, 0.2);
+    margin:5px;
+    border: rgb(183, 180, 180) 1px solid;
+    width:99%;
+    justify-content: center; 
+    align-items:center;
+}
+
+
+/*formulario*/
+.formulario{
+    width: 500px;
+    max-width: 100%;
+    margin:auto;
+    margin-top:30px;
+    padding:20px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.3);
+    
+}
+.form_titulo{
+    text-align: center;
+    padding-bottom: 25px;
+    margin-top: 0;
+    color: rgb(28, 28, 61);
+}
+.form_input, .form_label, .form_submit{
+    display:block;
+    width: 100%;
+    font-size: 1.3 em;
+    color: rgb(8, 8, 8);
+}
+.form_input {
+    padding: 15px;
+    background: rgba(72, 63, 114, 0.3);;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 50px;
+}
+.form_input:focus {
+    outline:1px solid rgba(0, 0, 0, 0.7);
+}
+
+.form_input:focus + .form_label{
+    margin-top: -120px;
+}
+.form_label{
+    padding-left: 15px;
+    position: absolute;
+    margin-top: -85px;
+    z-index: -20;
+    color: rgba(0, 0, 0, 0.665);
+    transition: all 0.2s;
+}
+.form_sub{
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    cursor:pointer;
+    border: none;
+}
+.fijar{
+    margin-top: -120px;
+}
+.warnings{
+    width: 300px;
+    text-align: center;
+    margin-top: -40px;
+    color: red;
+    padding-top: 2px;
+    font-size: smaller;
+}
+select:required:invalid{
+    color: rgb(75, 74, 74);
+}
+option[value=""][disabled0]{
+    display: none;
+}
+option {
+    color: black;
+}
+
+/*Reseñas*/
+.cont-resena{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+
+ }
+
+.cont-resena-titulo{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+   
+}
+
+.item-resena{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    text-align: center;
+  
+}
+
+.iframe-resena{
+    width: 500px; 
+    height: 315px;
+    
+}
+
+
+/*Pagina Servicios*/
+.det-servicios{
+    background-color: white;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.titulo-servicios{
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+   
+}
+.cuerpo-servicios {
+    margin: 10px;
+    padding: 15px;
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: 33% 30% 33%;
+    grid-template-areas: "repara repara repara"
+                         "compra venta venta";
+
+}
+.reparaciones{
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding: 10px;
+    grid-area: repara;
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: 33% 30% 33%;
+    grid-template-areas: "tit-repara tit-repara tit-repara"
+                         "repara1 repara2 repara3";
+}
+.reparaciones1{
+    grid-area: repara1;
+}
+
+.reparaciones2{
+    grid-area: repara2;
+}
+
+.reparaciones3{
+    grid-area: repara3;
+}
+
+
+.compra-usados{
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding: 10px;
+    grid-area: compra;
+}
+.venta-usados{
+    background-color: aliceblue; 
+    border-radius: 6px;
+    box-shadow:  0px 1px 10px rgba(44, 42, 42, 0.5);
+    padding: 10px;
+    grid-area: venta;
+}

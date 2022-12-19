@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>La Cajita Musical</title>
+        <link rel="shortcut icon" href="./img/musicbox-chico.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/styles.css">
+        <script src="https://kit.fontawesome.com/b817739989.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+    <body>
+        <header id="idheader">
+            <!--en archivo index.js-->
+        </header>
+   
+        <main>
+            <article>
+                <section class="banner">
+                    <div class="fondo">
+                        <div class="texto">
+                            <h2 class="animate__animated animate__rubberBand">La Cajita Musical</h2>
+                            
+                            <h4 class="animate__animated animate__slideInLeft">Catalogo</h4>
+                        </div>
+                    </div>
+                </section>
+                <!-- consumo de api para obtener articulos-->
+                <div id="app">
+
+                    <div class="container">
+                        <div v-for="instrumento of catalogo" class="catalogo-item">
+                            <div class="card-body">                
+                                <div class="img-card-prod">
+                                     <img :src="instrumento.img_path" :alt="instrumento.model">
+                                </div>
+                                <div class="data">
+                                     <h5>{{instrumento.model}}</h5>
+                                     <p>{{instrumento.year}}</p>
+                                </div>    
+                           </div>
+                           <div class="datos">
+                             <h4>{{instrumento.category}}</h4>
+                             <p> {{instrumento.detail}}</p>
+                           </div>
+                           <div class="price">
+                              <div class="compra">
+                                <h3>{{instrumento.price}} Dolares</h3>
+                              </div> 
+                              <div class="pagos">
+                                <h3>Formas de Pago</h3>
+                                <p>Descuentos en Efectivo</p>
+                                <p>15% USD - 20% ARS</p>
+                                <p>6 cuotas sin Int.</p>
+                              </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            
+            </article>
+        </main>
+
+        <footer class="foot" id="idfooter">
+            <!--en archivo index.js-->
+        </footer>
+    <!-- relaciono HTML con JS con header y footer-->
+    <script src="./js/index.js"></script>
+    <!--scritpt Vue y consumo de api-->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/json.js"></script>
+</body>
+</html>
